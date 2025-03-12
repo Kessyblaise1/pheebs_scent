@@ -1,0 +1,29 @@
+.accordion {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.accordion.open {
+  border: none;
+}
+
+.accordion-header {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ width: 100%;
+  padding: 15px 0px;
+}
+
+.accordion-content {
+  height: 0px;
+  overflow: hidden;
+  opacity: 0;
+  transition: height .3s ease-out, opacity .3s ease-in;
+}
+
+.accordion-content.open {
+  height: calc(var(--quantity) * 51.8px);
+  overflow: visible;
+  opacity: 1;
+}
